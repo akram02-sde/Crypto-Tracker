@@ -47,7 +47,7 @@ const LandingIntro = () => {
           <RWebShare
             data={{
               text: "Crypto Dashboard made using React JS in 2023",
-              url: "https://crypto-dashboard-zaid.netlify.app/",
+              url: "https://crypto-tracker-madebyakram.onrender.com/",
               title: "Crypto Dashboard",
             }}
             onClick={() => console.log("shared successfully!")}

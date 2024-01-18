@@ -15,19 +15,19 @@ const Footer = () => {
       </Link>
 
       <div className="socials-flex">
-        <a target="_blank" href="https://github.com/zaidloni">
+        <a target="_blank" href="https://github.com/akram02-sde">
           <GitHub className="socials-icon" />
         </a>
-        <a target="_blank" href="https://www.linkedin.com/in/zaidloni/">
+        <a target="_blank" href="https://www.linkedin.com/in/akram-ahmed-khan-b8767823b/">
           <LinkedIn className="socials-icon" />
         </a>
-        <a target="_blank" href="mailto:zaidloni20@gmail.com">
+        <a target="_blank" href="mailto:akram02april@gmail.com">
           <EmailIcon className="socials-icon" />
         </a>
         <RWebShare
           data={{
             text: "Crypto Dashboard made using React JS in 2023",
-            url: "https://crypto-dashboard-zaid.netlify.app/",
+            url: "https://crypto-tracker-madebyakram.onrender.com/",
             title: "Crypto Dashboard",
           }}
           onClick={() => console.log("shared successfully!")}
