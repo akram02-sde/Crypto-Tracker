@@ -1,18 +1,6 @@
-import axios from "axios";
-import { COIN_GECKO_V3 } from "../constants";
-
-export const getCoinPrices = (id, days, priceType) => {
-  const data = axios
-    .get(
-      `${COIN_GECKO_V3}/coins/${id}/market_chart?vs_currency=usd&days=${days}&interval=daily`
-    )
-    .then((response) => {
-      if (priceType == "prices") return response.data.prices;
-      else if (priceType == "market_caps") return response.data.market_caps;
-      else if (priceType == "total_volumes") return response.data.total_volumes;
-    })
-    .catch((error) => {
-      console.log("Error>>>", error);
-    });
-  return data;
-};
+export default function getCoinPrices(id, days, priceType, currency) {
+    return fetch(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=${currency}&days=${days}&interval=daily`)
+        .then(data => data.json())
+        .then(data => data[priceType])
+        .catch(err => console.log(err))
+}
