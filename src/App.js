@@ -1,25 +1,25 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import HomePage from './pages/HomePage';
-import Dashboard from './pages/Dashboard';
-import CoinDetailsPage from './pages/CoinDetailsPage';
-import ComparePage from './pages/ComparePage';
-import WatchList from './pages/WatchList';
-import ConvertPage from './pages/ConvertPage';
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import DashboardPage from "./pages/dashboard";
+import CoinPage from "./pages/coin";
+import ComparePage from "./pages/compare";
+import WatchListPage from "./pages/watchlist";
 
-function App() {
+const App = () => {
   return (
     <div>
-    <Routes>
-      <Route path='/' element={<HomePage/>} />
-      <Route path='/dashboard' element={<Dashboard/>} />
-      <Route path='/coin/:id' element={<CoinDetailsPage/>} />
-      <Route path='/compare' element={<ComparePage/>} />
-      <Route path='/watchlist' element={<WatchList/>} />
-      <Route path='/convert' element={<ConvertPage/>} />
-    </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/coin/:id" element={<CoinPage />} />
+          <Route path="/compare" element={<ComparePage />} />
+          <Route path="/watchlist" element={<WatchListPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
